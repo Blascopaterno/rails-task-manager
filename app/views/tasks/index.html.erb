@@ -1,0 +1,17 @@
+<% @tasks.each do |task|%>
+<div class="container">
+  <div id="box">
+    <%= form_for(task) do |f| %>
+      <%= f.check_box :completed %>
+    <% end %>
+  </div>
+
+  <%= link_to task.title, find_path(task) %>
+
+  <div id="destroy">
+    <%= link_to "DESTROY", destroy_path(task), method: :delete,
+    data: { confirm: 'Are you sure you want to delete the task' } %>
+  </div>
+</div>
+<% end %>
+<%= link_to 'Add a new task', new_path %>

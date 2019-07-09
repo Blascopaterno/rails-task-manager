@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+.container {
+  display: flex;
+  margin: 10px 0px;
+}
+
+#box {
+  margin: 0px 5px;
+}
+
+#destroy {
+  margin: 0px 5px;
+}
