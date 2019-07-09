@@ -5,6 +5,8 @@
   <%= f.label :details %>
   <%= f.text_field :details %>
 
-  <%= f.check_box :completed %>
+  <% unless task.new_record? %>
+    <%= f.check_box :completed %>
+  <% end %>
   <%= f.submit %>
 <% end %>
